@@ -13,60 +13,63 @@ interface PricingProps {
 }
 
 export default function Pricing({
-  title = "Build your dream landing page, today.",
-  description = "Get lifetime access to all the components. No recurring fees. Just simple, transparent pricing.",
+  title = "Early Access Pricing",
+  description = "Alva is currently in early development. Be one of the first to support it and shape the future of your daily rituals. These prices will only be available during the MVP phase.",
   plans = [
     {
       name: "Free",
-      description: "For everyone starting out on a website for their big idea",
+      description: "Try out the early version of Alva at no cost",
       price: 0,
-      priceNote: "Free and open-source forever.",
+      priceNote: "Limited features · Voice interaction & routines available",
       cta: {
         variant: "glow",
-        label: "Get started for free",
-        href: "/docs/getting-started/introduction",
+        label: "Join for free",
+        href: "/#contact", // or early access waitlist link
       },
       features: [
-        "1 website template",
-        "9 blocks and sections",
-        "4 custom animations",
+        "Morning & night rituals",
+        "Voice interaction (beta)",
+        "Mood tracking",
+        "Offline-ready experience",
       ],
       variant: "default",
-      className: "hidden lg:flex",
     },
     {
-      name: "Pro",
+      name: "Early Supporter",
       icon: <User className="size-4" />,
-      description: "For early-stage founders, solopreneurs and indie devs",
-      price: 99,
-      priceNote: "Lifetime access. Free updates. No recurring fees.",
+      description:
+        "Support development and get lifetime access at a reduced price",
+      price: 29,
+      priceNote: "One-time payment · Includes all future features",
       cta: {
         variant: "default",
-        label: "Get all-access",
-        href: siteConfig.pricing.pro,
+        label: "Secure early access",
+        href: siteConfig.pricing.pro || "/#contact",
       },
       features: [
-        `${siteConfig.stats.websiteTemplates} website templates`,
-        `${siteConfig.stats.appTemplates} app templates`,
-        `${siteConfig.stats.sections} blocks and sections`,
-        `${siteConfig.stats.illustrations} illustrations`,
-        `${siteConfig.stats.animations} custom animations`,
+        "Full access to all current & upcoming features",
+        "Priority feedback access",
+        "Free updates for life",
+        "Name listed in contributor credits (optional)",
       ],
       variant: "glow-brand",
     },
     {
-      name: "Pro Team",
+      name: "Team Plan (Coming Soon)",
       icon: <Users className="size-4" />,
-      description: "For teams and agencies working on cool products together",
-      price: 499,
-      priceNote: "Lifetime access. Free updates. No recurring fees.",
+      description:
+        "For coaches, families or small teams looking to grow together",
+      price: 40,
+      priceNote: "Sign up to be notified when this plan launches",
       cta: {
         variant: "default",
-        label: "Get all-access for your team",
-        href: siteConfig.pricing.team,
+        label: "Notify me",
+        href: "/#contact", // or a waitlist form
       },
       features: [
-        "All the templates, components and sections available for your entire team",
+        "Shared routines and feedback insights",
+        "Multiple profiles support",
+        "Team wellness insights (planned)",
       ],
       variant: "glow",
     },
