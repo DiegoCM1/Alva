@@ -22,11 +22,11 @@ export const metadata: Metadata = {
   ],
   authors: [
     {
-      name: "Mikolaj Dobrucki",
-      url: "https://mikolajdobrucki.com",
+      name: "Verskod",
+      url: "https://diegocm2025-portfolio.vercel.app/",
     },
   ],
-  creator: "mikolajdobrucki",
+  creator: "Verskod",
   openGraph: {
     type: "website",
     locale: "en_US",

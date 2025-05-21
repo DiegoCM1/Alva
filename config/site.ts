@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "Launch UI",
+  name: "Alva – AI-Powered Morning & Night Companion",
   url: "https://launchuicomponents.com",
   getStartedUrl:
     "https://launchuicomponents.com/docs/getting-started/introduction",
