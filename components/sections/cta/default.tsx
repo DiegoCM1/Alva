@@ -21,12 +21,17 @@ interface CTAProps {
 }
 
 export default function CTA({
-  title = "Start building",
+  title = "Start to experience a mindful start and end to your day",
   buttons = [
     {
-      href: siteConfig.getStartedUrl,
-      text: "Get Started",
+      href: "/#contact", // or link to early access form
+      text: "Join Early Access",
       variant: "default",
+    },
+    {
+      href: siteConfig.links.github,
+      text: "Explore on GitHub",
+      variant: "glow",
     },
   ],
   className,
