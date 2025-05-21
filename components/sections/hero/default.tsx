@@ -32,15 +32,26 @@ export default function Hero({
   title = "Start and end your day with intention",
   description = "Alva is your AI-powered morning and night assistant — helping you wake up with clarity, sleep with peace, and live more intentionally through guided conversations, music, and rituals.",
   mockup = (
-    <Screenshot
-      srcLight="/app-light.png"
-      srcDark="/app-dark.png"
-      alt="Alva app screenshot"
-      width={1248}
-      height={765}
-      className="w-full"
-    />
+    <div className="flex items-center justify-center gap-4 sm:flex-row sm:gap-8">
+      <Screenshot
+        srcLight="/app-light.png"
+        srcDark="/app-dark.png"
+        alt="Alva Morning Screenshot"
+        width={1248}
+        height={765}
+        className="w-1/2"
+      />
+      <Screenshot
+        srcLight="/app-light-2.png"
+        srcDark="/app-dark-2.png"
+        alt="Alva Night Screenshot"
+        width={1248}
+        height={765}
+        className="w-1/2"
+      />
+    </div>
   ),
+
   badge = (
     <Badge variant="outline" className="animate-appear">
       <span className="text-muted-foreground">Built with ❤️ by Verskod</span>
