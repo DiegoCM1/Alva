@@ -1,10 +1,10 @@
 import { ReactNode } from "react";
 import {
-  BlocksIcon,
+  RssIcon,
   EclipseIcon,
   FastForwardIcon,
-  LanguagesIcon,
-  MonitorSmartphoneIcon,
+  BrainCircuitIcon,
+  AudioLinesIcon,
   RocketIcon,
   ScanFaceIcon,
   SquarePenIcon,
@@ -26,52 +26,58 @@ interface ItemsProps {
 }
 
 export default function Items({
-  title = "Everything you need. Nothing you don't.",
+  title = "What makes Alva your perfect daily companion?",
   items = [
     {
-      title: "Accessibility first",
-      description: "Fully WCAG 2.0 compliant, made with best a11y practices",
-      icon: <ScanFaceIcon className="size-5 stroke-1" />,
-    },
-    {
-      title: "Responsive design",
-      description: "Looks and works great on any device and screen size",
-      icon: <MonitorSmartphoneIcon className="size-5 stroke-1" />,
-    },
-    {
-      title: "Light and dark mode",
+      title: "Morning Activation",
       description:
-        "Seamless switching between color schemes, 6 themes included",
-      icon: <EclipseIcon className="size-5 stroke-1" />,
-    },
-    {
-      title: "Easy to customize",
-      description: "Flexible options to match your product or brand",
-      icon: <BlocksIcon className="size-5 stroke-1" />,
-    },
-    {
-      title: "Top-level performance",
-      description: "Made for lightning-fast load times and smooth interactions",
-      icon: <FastForwardIcon className="size-5 stroke-1" />,
-    },
-    {
-      title: "Production ready",
-      description: "Thoroughly tested and launch-prepared",
+        "Start your day with clarity using personalized greetings, questions, and rituals.",
       icon: <RocketIcon className="size-5 stroke-1" />,
     },
     {
-      title: "Made for localisation",
+      title: "Night Reflection",
       description:
-        "Easy to implement support for multiple languages and regions",
-      icon: <LanguagesIcon className="size-5 stroke-1" />,
+        "Wind down with guided reflections, mood tracking, and relaxing content.",
+      icon: <ScanFaceIcon className="size-5 stroke-1" />,
     },
     {
-      title: "CMS friendly",
+      title: "Voice Interaction",
       description:
-        "Built to work with your any headless content management system",
+        "Talk to Alva naturally — ask, answer, reflect. All with your voice.",
+      icon: <AudioLinesIcon className="size-5 stroke-1" />,
+    },
+    {
+      title: "Mood & Energy Check",
+      description:
+        "Alva tracks your emotional state to improve suggestions and support.",
       icon: <SquarePenIcon className="size-5 stroke-1" />,
     },
+    {
+      title: "Mantras & Intentions",
+      description:
+        "Receive daily mantras and set meaningful intentions for your day.",
+      icon: <EclipseIcon className="size-5 stroke-1" />,
+    },
+    {
+      title: "Smart Music Generator",
+      description:
+        "Alva creates custom playlists based on your mood, time of day, and routine.",
+      icon: <FastForwardIcon className="size-5 stroke-1" />,
+    },
+    {
+      title: "Offline Friendly",
+      description:
+        "Morning & night experiences work even without an internet connection.",
+      icon: <RssIcon className="size-5 stroke-1" />,
+    },
+    {
+      title: "Always Learning",
+      description:
+        "Alva improves with each interaction, becoming more aligned with you.",
+      icon: <BrainCircuitIcon className="size-5 stroke-1" />,
+    },
   ],
+
   className,
 }: ItemsProps) {
   return (
