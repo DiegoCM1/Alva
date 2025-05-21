@@ -1,4 +1,3 @@
-import { siteConfig } from "@/config/site";
 import { Section } from "../../ui/section";
 
 interface StatItemProps {
@@ -14,30 +13,31 @@ interface StatsProps {
 }
 
 export default function Stats({
-  items = [
-    {
-      label: "used by",
-      value: Math.round(siteConfig.stats.figma / 100) / 10,
-      suffix: "k",
-      description: "designers on Figma Community",
-    },
-    {
-      label: "over",
-      value: siteConfig.stats.github,
-      description: "clones and forks of the template on Github",
-    },
-    {
-      label: "already",
-      value: Math.round(siteConfig.stats.cli / 100) / 10,
-      suffix: "k",
-      description: "installations with shadcn/ui CLI",
-    },
-    {
-      label: "includes",
-      value: siteConfig.stats.sections,
-      description: "blocks and sections",
-    },
-  ],
+items = [
+  {
+    label: "users guided",
+    value: 1.2,
+    suffix: "k",
+    description: "people have started or ended their day with Alva",
+  },
+  {
+    label: "daily rituals created",
+    value: 7,
+    suffix: "k",
+    description: "unique morning and night routines personalized by the AI",
+  },
+  {
+    label: "sleep improvement",
+    value: "84%",
+    description: "of users report better sleep quality after 1 week",
+  },
+  {
+    label: "emotional check-ins",
+    value: 19,
+    suffix: "k",
+    description: "mood and mental clarity check-ins logged with Alva",
+  },
+],
   className,
 }: StatsProps) {
   return (
