@@ -29,13 +29,13 @@ interface HeroProps {
 }
 
 export default function Hero({
-  title = "Give your big idea the design it deserves",
-  description = "Professionally designed blocks and templates built with React, Shadcn/ui and Tailwind that will help your product stand out.",
+  title = "Start and end your day with intention",
+  description = "Alva is your AI-powered morning and night assistant — helping you wake up with clarity, sleep with peace, and live more intentionally through guided conversations, music, and rituals.",
   mockup = (
     <Screenshot
       srcLight="/app-light.png"
       srcDark="/app-dark.png"
-      alt="Launch UI app screenshot"
+      alt="Alva app screenshot"
       width={1248}
       height={765}
       className="w-full"
@@ -43,11 +43,9 @@ export default function Hero({
   ),
   badge = (
     <Badge variant="outline" className="animate-appear">
-      <span className="text-muted-foreground">
-        New version of Launch UI is out!
-      </span>
+      <span className="text-muted-foreground">Built with ❤️ by Verskod</span>
       <a href={siteConfig.getStartedUrl} className="flex items-center gap-1">
-        Get started
+        Try Alva
         <ArrowRightIcon className="size-3" />
       </a>
     </Badge>
@@ -55,12 +53,12 @@ export default function Hero({
   buttons = [
     {
       href: siteConfig.getStartedUrl,
-      text: "Get Started",
+      text: "Try Alva",
       variant: "default",
     },
     {
       href: siteConfig.links.github,
-      text: "Github",
+      text: "View on GitHub",
       variant: "glow",
       icon: <Github className="mr-2 size-4" />,
     },

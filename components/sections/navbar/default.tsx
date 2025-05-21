@@ -3,7 +3,6 @@ import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
 import { Menu } from "lucide-react";
 
-import Navigation from "../../ui/navigation";
 import { Button, type ButtonProps } from "../../ui/button";
 import {
   Navbar as NavbarComponent,
@@ -40,13 +39,15 @@ interface NavbarProps {
 
 export default function Navbar({
   logo = <LaunchUI />,
-  name = "Launch UI",
+  name = "Alva",
   homeUrl = siteConfig.url,
   mobileLinks = [
-    { text: "Getting Started", href: siteConfig.url },
-    { text: "Components", href: siteConfig.url },
-    { text: "Documentation", href: siteConfig.url },
+    { text: "About", href: "#about" },
+    { text: "Features", href: "#features" },
+    { text: "How it Works", href: "#how" },
+    { text: "Contact", href: "#contact" },
   ],
+
   actions = [
     { text: "Sign in", href: siteConfig.url, isButton: false },
     {
@@ -57,7 +58,6 @@ export default function Navbar({
     },
   ],
   showNavigation = true,
-  customNavigation,
   className,
 }: NavbarProps) {
   return (
@@ -73,7 +73,22 @@ export default function Navbar({
               {logo}
               {name}
             </a>
-            {showNavigation && (customNavigation || <Navigation />)}
+            {showNavigation && (
+              <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
+                <a href="#about" className="hover:underline">
+                  About
+                </a>
+                <a href="#features" className="hover:underline">
+                  Features
+                </a>
+                <a href="#how" className="hover:underline">
+                  How it Works
+                </a>
+                <a href="#contact" className="hover:underline">
+                  Contact
+                </a>
+              </nav>
+            )}
           </NavbarLeft>
           <NavbarRight>
             {actions.map((action, index) =>
