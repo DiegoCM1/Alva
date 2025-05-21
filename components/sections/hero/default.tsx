@@ -32,14 +32,14 @@ export default function Hero({
   title = "Start and end your day with intention",
   description = "Alva is your AI-powered morning and night assistant — helping you wake up with clarity, sleep with peace, and live more intentionally through guided conversations, music, and rituals.",
   mockup = (
-    <div className="flex items-center justify-center gap-4 sm:flex-row sm:gap-8">
+    <div className="flex items-center justify-center text-center gap-4 sm:flex-row sm:gap-8 w-full lg:justify-evenly">
       <Screenshot
         srcLight="/app-light.png"
         srcDark="/app-dark.png"
         alt="Alva Morning Screenshot"
         width={1248}
         height={765}
-        className="w-1/2"
+        className="w-1/2 lg:w-1/3"
       />
       <Screenshot
         srcLight="/app-light-2.png"
@@ -47,7 +47,7 @@ export default function Hero({
         alt="Alva Night Screenshot"
         width={1248}
         height={765}
-        className="w-1/2"
+        className="w-1/2 lg:w-1/3"
       />
     </div>
   ),
