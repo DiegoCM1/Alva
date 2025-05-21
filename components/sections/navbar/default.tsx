@@ -1,3 +1,5 @@
+'use client'
+
 import { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
@@ -40,12 +42,12 @@ interface NavbarProps {
 export default function Navbar({
   logo = <LaunchUI />,
   name = "Alva",
-  homeUrl = siteConfig.url,
+  homeUrl = "/",
   mobileLinks = [
-    { text: "About", href: "#about" },
     { text: "Features", href: "#features" },
-    { text: "How it Works", href: "#how" },
-    { text: "Contact", href: "#contact" },
+    { text: "Impact", href: "#stats" },
+    { text: "FAQ", href: "#faq" },
+    { text: "Contact", href: "#cta" },
   ],
 
   actions = [
@@ -60,10 +62,29 @@ export default function Navbar({
   showNavigation = true,
   className,
 }: NavbarProps) {
+  function scrollToSection(id: string) {
+    const el = document.querySelector(id);
+    if (el) {
+      const header = document.querySelector("header");
+      const headerHeight = header ? header.offsetHeight : 80;
+      const elementPosition = el.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  }
+
   return (
-    <header className={cn("sticky top-0 z-50 -mb-4 px-4", className)}>
-      <div className="fade-bottom bg-background/15 absolute left-0 h-24 w-full backdrop-blur-lg"></div>
-      <div className="max-w-container relative mx-auto">
+    <header
+      className={cn(
+        "sticky top-0 z-50 w-full bg-background/80 backdrop-blur-sm",
+        className,
+      )}
+    >
+      <div className="mx-auto max-w-container px-4">
         <NavbarComponent>
           <NavbarLeft>
             <a
@@ -75,21 +96,36 @@ export default function Navbar({
             </a>
             {showNavigation && (
               <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
-                <a href="#features" className="hover:underline">
+                <button
+                  onClick={() => scrollToSection("#features")}
+                  className="hover:underline"
+                >
                   Features
-                </a>
-                <a href="#stats" className="hover:underline">
+                </button>
+                <button
+                  onClick={() => scrollToSection("#stats")}
+                  className="hover:underline"
+                >
                   Impact
-                </a>
-                <a href="#pricing" className="hover:underline">
+                </button>
+                <button
+                  onClick={() => scrollToSection("#pricing")}
+                  className="hover:underline"
+                >
                   Pricing
-                </a>
-                <a href="#faq" className="hover:underline">
+                </button>
+                <button
+                  onClick={() => scrollToSection("#faq")}
+                  className="hover:underline"
+                >
                   FAQ
-                </a>
-                <a href="#cta" className="hover:underline">
+                </button>
+                <button
+                  onClick={() => scrollToSection("#cta")}
+                  className="hover:underline"
+                >
                   Contact
-                </a>
+                </button>
               </nav>
             )}
           </NavbarLeft>
@@ -137,13 +173,15 @@ export default function Navbar({
                     <span>{name}</span>
                   </a>
                   {mobileLinks.map((link, index) => (
-                    <a
+                    <button
                       key={index}
-                      href={link.href}
-                      className="text-muted-foreground hover:text-foreground"
+                      onClick={() => {
+                        scrollToSection(link.href);
+                      }}
+                      className="text-muted-foreground hover:text-foreground text-left"
                     >
                       {link.text}
-                    </a>
+                    </button>
                   ))}
                 </nav>
               </SheetContent>
