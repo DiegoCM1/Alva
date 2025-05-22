@@ -30,7 +30,7 @@ export default function CTA({
     },
     {
       href: siteConfig.links.github,
-      text: "Explore on GitHub",
+      text: "Tell Us What You’d Love to See",
       variant: "glow",
     },
   ],

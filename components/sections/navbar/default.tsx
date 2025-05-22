@@ -2,7 +2,7 @@
 
 import { ReactNode } from "react";
 import { cn } from "@/lib/utils";
-import { siteConfig } from "@/config/site";
+// import { siteConfig } from "@/config/site";
 import { Menu } from "lucide-react";
 import { ModeToggle } from "../../ui/mode-toggle";
 
@@ -53,15 +53,15 @@ export default function Navbar({
     { text: "Contact", href: "#cta" },
   ],
 
-  actions = [
-    { text: "Sign in", href: siteConfig.url, isButton: false },
-    {
-      text: "Get Started",
-      href: siteConfig.url,
-      isButton: true,
-      variant: "default",
-    },
-  ],
+  // actions = [
+  //   { text: "Sign in", href: siteConfig.url, isButton: false },
+  //   {
+  //     text: "Get Started",
+  //     href: siteConfig.url,
+  //     isButton: true,
+  //     variant: "default",
+  //   },
+  // ],
   showNavigation = true,
   className,
 }: NavbarProps) {
@@ -133,7 +133,8 @@ export default function Navbar({
             )}
           </NavbarLeft>
           <NavbarRight>
-            {actions.map((action, index) =>
+            {/* Sign up and sign in buttons */}
+            {/* {actions.map((action, index) =>
               action.isButton ? (
                 <Button
                   key={index}
@@ -155,7 +156,7 @@ export default function Navbar({
                   {action.text}
                 </a>
               ),
-            )}
+            )} */}
             {showModeToggle && <ModeToggle />} {/* Agregar esta línea */}
             <Sheet>
               <SheetTrigger asChild>

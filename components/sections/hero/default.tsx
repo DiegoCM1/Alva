@@ -1,14 +1,16 @@
+'use client'
+
+
 import { siteConfig } from "@/config/site";
 import { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 import { Button, type ButtonProps } from "../../ui/button";
 import { Badge } from "../../ui/badge";
-import { ArrowRightIcon } from "lucide-react";
+import { ArrowRightIcon, GraduationCapIcon } from "lucide-react";
 import { Section } from "../../ui/section";
 import { Mockup, MockupFrame } from "../../ui/mockup";
 import Glow from "../../ui/glow";
-import Github from "../../logos/github";
 import Screenshot from "../../ui/screenshot";
 
 interface HeroButtonProps {
@@ -17,6 +19,7 @@ interface HeroButtonProps {
   variant?: ButtonProps["variant"];
   icon?: ReactNode;
   iconRight?: ReactNode;
+  onClick?: (e: React.MouseEvent) => void;
 }
 
 interface HeroProps {
@@ -32,7 +35,7 @@ export default function Hero({
   title = "Start and end your day with intention",
   description = "Alva is your AI-powered morning and night assistant — helping you wake up with clarity, sleep with peace, and live more intentionally through guided conversations, music, and rituals.",
   mockup = (
-    <div className="flex items-center justify-center text-center gap-4 sm:flex-row sm:gap-8 w-full lg:justify-evenly">
+    <div className="flex w-full items-center justify-center gap-4 text-center sm:flex-row sm:gap-8 lg:justify-evenly">
       <Screenshot
         srcLight="/app-light.png"
         srcDark="/app-dark.png"
@@ -51,31 +54,55 @@ export default function Hero({
       />
     </div>
   ),
-
   badge = (
-    <Badge variant="outline" className="animate-appear">
+    <Badge variant="outline" className="animate-appear opacity-0">
       <span className="text-muted-foreground">Built with ❤️ by Verskod</span>
       <a href={siteConfig.getStartedUrl} className="flex items-center gap-1">
-        Try Alva
+        Join the waitlist
         <ArrowRightIcon className="size-3" />
       </a>
     </Badge>
   ),
-  buttons = [
+  buttons,
+  className,
+}: HeroProps) {
+  
+  const scrollToSection = (id: string) => {
+    const el = document.querySelector(id);
+    if (el) {
+      const header = document.querySelector("header");
+      const headerHeight = header ? header.offsetHeight : 80;
+      
+      const elementPosition = el.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - headerHeight - 32; // Added extra offset
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
+  const defaultButtons: HeroButtonProps[] = [
     {
       href: siteConfig.getStartedUrl,
-      text: "Try Alva",
+      text: "Join the waitlist",
       variant: "default",
     },
     {
-      href: siteConfig.links.github,
-      text: "View on GitHub",
+      href: "#features",
+      text: "Learn more",
       variant: "glow",
-      icon: <Github className="mr-2 size-4" />,
+      icon: <GraduationCapIcon className="mr-2 size-4" />,
+      onClick: (e) => {
+        e.preventDefault();
+        scrollToSection("#features");
+      },
     },
-  ],
-  className,
-}: HeroProps) {
+  ];
+
+  const finalButtons = buttons ?? defaultButtons;
+
   return (
     <Section
       className={cn(
@@ -86,22 +113,25 @@ export default function Hero({
       <div className="max-w-container mx-auto flex flex-col gap-12 pt-16 sm:gap-24">
         <div className="flex flex-col items-center gap-6 text-center sm:gap-12">
           {badge !== false && badge}
-          <h1 className="animate-appear from-foreground to-foreground dark:to-muted-foreground relative z-10 inline-block bg-linear-to-r bg-clip-text text-4xl leading-tight font-semibold text-balance text-transparent drop-shadow-2xl sm:text-6xl sm:leading-tight md:text-8xl md:leading-tight">
+          <h1 className="animate-appear from-foreground to-foreground dark:to-muted-foreground relative z-10 inline-block bg-gradient-to-r bg-clip-text text-4xl font-semibold leading-tight text-balance text-transparent drop-shadow-2xl opacity-0 sm:text-6xl sm:leading-tight md:text-8xl md:leading-tight">
             {title}
           </h1>
           <p className="text-md animate-appear text-muted-foreground relative z-10 max-w-[740px] font-medium text-balance opacity-0 delay-100 sm:text-xl">
             {description}
           </p>
-          {buttons !== false && buttons.length > 0 && (
+          {finalButtons !== false && finalButtons.length > 0 && (
             <div className="animate-appear relative z-10 flex justify-center gap-4 opacity-0 delay-300">
-              {buttons.map((button, index) => (
+              {finalButtons.map((button, index) => (
                 <Button
                   key={index}
                   variant={button.variant || "default"}
                   size="lg"
                   asChild
                 >
-                  <a href={button.href}>
+                  <a 
+                    href={button.href}
+                    onClick={button.onClick}
+                  >
                     {button.icon}
                     {button.text}
                     {button.iconRight}
