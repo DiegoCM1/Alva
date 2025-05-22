@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
 import { Menu } from "lucide-react";
+import { ModeToggle } from "../../ui/mode-toggle";
 
 import { Button, type ButtonProps } from "../../ui/button";
 import {
@@ -37,12 +38,14 @@ interface NavbarProps {
   showNavigation?: boolean;
   customNavigation?: ReactNode;
   className?: string;
+  showModeToggle?: boolean; // Agregar esta línea
 }
 
 export default function Navbar({
   logo = <LaunchUI />,
   name = "Alva",
   homeUrl = "/",
+  showModeToggle = true, // Agregar esta línea
   mobileLinks = [
     { text: "Features", href: "#features" },
     { text: "Impact", href: "#stats" },
@@ -80,7 +83,7 @@ export default function Navbar({
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 w-full bg-background/80 backdrop-blur-sm",
+        "fixed top-0 left-0 right-0 z-50 w-full bg-background/80 backdrop-blur-sm border-b",
         className,
       )}
     >
@@ -153,6 +156,7 @@ export default function Navbar({
                 </a>
               ),
             )}
+            {showModeToggle && <ModeToggle />} {/* Agregar esta línea */}
             <Sheet>
               <SheetTrigger asChild>
                 <Button

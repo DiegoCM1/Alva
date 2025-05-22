@@ -2,7 +2,6 @@ import { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
 
-import { ModeToggle } from "../../ui/mode-toggle";
 import {
   Footer,
   FooterColumn,
@@ -64,7 +63,6 @@ export default function FooterSection({
     { text: "Privacy Policy", href: siteConfig.url },
     { text: "Terms of Service", href: siteConfig.url },
   ],
-  showModeToggle = true,
   className,
 }: FooterProps) {
   return (
@@ -101,7 +99,6 @@ export default function FooterSection({
                   {policy.text}
                 </a>
               ))}
-              {showModeToggle && <ModeToggle />}
             </div>
           </FooterBottom>
         </Footer>
@@ -109,3 +106,5 @@ export default function FooterSection({
     </footer>
   );
 }
+
+

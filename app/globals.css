@@ -211,10 +211,11 @@
   }
   body {
     @apply bg-background text-foreground;
+    padding-top: 2rem; /* Adjust this value based on your navbar height */
   }
-}
-
-html {
-  scroll-behavior: smooth;
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem; /* Adjust this value to match your navbar height */
+  }
 }
 
