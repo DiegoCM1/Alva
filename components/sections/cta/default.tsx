@@ -19,7 +19,7 @@ export default function CtaWithWaitlist() {
               Join the Waitlist
             </h2>
             <p className="text-muted-foreground mb-6 max-w-md">
-              Get early access to Alva and stay updated on progress. We'll notify you when we launch.
+              Get early access to Alva and stay updated on progress. Well notify you when we launch.
             </p>
             <form
               action="https://formsubmit.co/luiscolin764@gmail.com"
