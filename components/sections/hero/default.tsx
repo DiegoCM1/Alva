@@ -55,7 +55,7 @@ export default function Hero({
   badge = (
     <Badge variant="outline" className="animate-appear opacity-0">
       <span className="text-muted-foreground">Built with ❤️ by Verskod</span>
-      <a href="cta" className="flex items-center gap-1">
+      <a href="#cta" className="flex items-center gap-1">
         Join the waitlist
         <ArrowRightIcon className="size-3" />
       </a>
