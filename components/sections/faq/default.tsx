@@ -21,51 +21,51 @@ interface FAQProps {
 }
 
 export default function FAQ({
-  title = "Questions and Answers",
+  title = "Preguntas Frecuentes",
   items = [
     {
-      question: "What is Alva and how does it work?",
+      question: "¿Qué es Alva y cómo funciona?",
       answer: (
         <>
           <p className="text-muted-foreground mb-4 max-w-[640px] text-balance">
-            Alva is an AI-powered assistant that guides you through your morning
-            and night routines using natural conversation, music, mood tracking,
-            and personalized suggestions.
+            Alva es un asistente impulsado por IA que te guía a través de tus rutinas
+            de mañana y noche usando conversación natural, música, seguimiento del
+            estado de ánimo y sugerencias personalizadas.
           </p>
           <p className="text-muted-foreground mb-4 max-w-[640px] text-balance">
-            It helps you start the day with clarity and end it with peace — all
-            through short, intentional interactions.
+            Te ayuda a comenzar el día con claridad y terminarlo con paz — todo
+            a través de interacciones cortas e intencionales.
           </p>
         </>
       ),
     },
     {
-      question: "Is Alva already available?",
+      question: "¿Alva ya está disponible?",
       answer: (
         <p className="text-muted-foreground mb-4 max-w-[640px] text-balance">
-          Alva is currently in early development. You can join the free early
-          access program to test the MVP version and help shape the future of
-          the app with your feedback.
+          Alva está actualmente en desarrollo inicial. Puedes unirte al programa
+          de acceso anticipado gratuito para probar la versión MVP y ayudar a dar
+          forma al futuro de la aplicación con tus comentarios.
         </p>
       ),
     },
     {
-      question: "Will Alva work without internet?",
+      question: "¿Alva funciona sin internet?",
       answer: (
         <p className="text-muted-foreground mb-4 max-w-[640px] text-balance">
-          Yes — Alva is being designed with offline-first functionality. That
-          means your core morning and night routines will still work even when
-          you are not connected.
+          Sí — Alva está siendo diseñada con funcionalidad sin conexión primero.
+          Esto significa que tus rutinas básicas de mañana y noche seguirán
+          funcionando incluso cuando no estés conectado.
         </p>
       ),
     },
     {
-      question: "Is there any cost to use Alva?",
+      question: "¿Tiene algún costo usar Alva?",
       answer: (
         <p className="text-muted-foreground mb-4 max-w-[640px] text-balance">
-          Alva is free to try while in MVP. You can support the project with a
-          one-time early supporter contribution that grants lifetime access to
-          all future features and updates.
+          Alva es gratuita para probar durante la fase MVP. Puedes apoyar el
+          proyecto con una contribución única de partidario temprano que otorga
+          acceso de por vida a todas las funciones y actualizaciones futuras.
         </p>
       ),
     },

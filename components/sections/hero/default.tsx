@@ -30,14 +30,14 @@ interface HeroProps {
 }
 
 export default function Hero({
-  title = "Start and end your day with intention",
-  description = "Alva is your AI-powered morning and night assistant — helping you wake up with clarity, sleep with peace, and live more intentionally through guided conversations, music, and rituals.",
+  title = "Comienza y termina tu día con intención",
+  description = "Alva es tu asistente de mañana y noche impulsado por IA — ayudándote a despertar con claridad, dormir con paz y vivir más conscientemente a través de conversaciones guiadas, música y rituales.",
   mockup = (
     <div className="flex w-full items-center justify-center gap-4 text-center sm:flex-row sm:gap-8 lg:justify-evenly">
       <Screenshot
         srcLight="/app-light.png"
         srcDark="/app-dark.png"
-        alt="Alva Morning Screenshot"
+        alt="Captura de Alva por la Mañana"
         width={1248}
         height={765}
         className="w-1/2 lg:w-1/3"
@@ -45,7 +45,7 @@ export default function Hero({
       <Screenshot
         srcLight="/app-light-2.png"
         srcDark="/app-dark-2.png"
-        alt="Alva Night Screenshot"
+        alt="Captura de Alva por la Noche"
         width={1248}
         height={765}
         className="w-1/2 lg:w-1/3"
@@ -54,9 +54,9 @@ export default function Hero({
   ),
   badge = (
     <Badge variant="outline" className="animate-appear opacity-0">
-      <span className="text-muted-foreground">Built with ❤️ by Verskod</span>
+      <span className="text-muted-foreground">Hecho con ❤️ por Verskod</span>
       <a href="#cta" className="flex items-center gap-1">
-        Join the waitlist
+        Únete a la lista de espera
         <ArrowRightIcon className="size-3" />
       </a>
     </Badge>
@@ -84,7 +84,7 @@ export default function Hero({
   const defaultButtons: HeroButtonProps[] = [
     {
       href: "cta",
-      text: "Join the waitlist",
+      text: "Únete a la lista de espera",
       variant: "default",
       onClick: (e) => {
         e.preventDefault();
@@ -93,7 +93,7 @@ export default function Hero({
     },
     {
       href: "#features",
-      text: "Learn more",
+      text: "Saber más",
       variant: "glow",
       icon: <GraduationCapIcon className="mr-2 size-4" />,
       onClick: (e) => {

@@ -17,6 +17,13 @@ export function ModeToggle() {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
+  // Theme translation mapping
+  const themeInSpanish: { [key: string]: string } = {
+    light: "claro",
+    dark: "oscuro",
+    system: "sistema",
+  };
+
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -29,20 +36,22 @@ export function ModeToggle() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" className="gap-1 px-2 py-0 text-xs">
-          <span className="capitalize">{theme}</span>
-          <span className="inline"> theme</span>
+          <span className="capitalize">
+            <span className="inline">Tema </span>
+            {themeInSpanish[theme ?? "system"]}
+          </span>
           <ChevronsUpDownIcon className="size-3" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => setTheme("light")}>
-          Light
+          Claro
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("dark")}>
-          Dark
+          Oscuro
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")}>
-          System
+          Sistema
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

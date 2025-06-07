@@ -15,27 +15,27 @@ interface StatsProps {
 export default function Stats({
 items = [
   {
-    label: "users guided",
+    label: "usuarios guiados",
     value: 1.2,
     suffix: "k",
-    description: "people have started or ended their day with Alva",
+    description: "personas han comenzado o terminado su día con Alva",
   },
   {
-    label: "daily rituals created",
+    label: "rituales diarios creados",
     value: 7,
     suffix: "k",
-    description: "unique morning and night routines personalized by the AI",
+    description: "rutinas únicas de mañana y noche personalizadas por la IA",
   },
   {
-    label: "sleep improvement",
+    label: "mejora del sueño",
     value: "84%",
-    description: "of users report better sleep quality after 1 week",
+    description: "de usuarios reportan mejor calidad de sueño después de 1 semana",
   },
   {
-    label: "emotional check-ins",
+    label: "registros emocionales",
     value: 19,
     suffix: "k",
-    description: "mood and mental clarity check-ins logged with Alva",
+    description: "registros de estado de ánimo y claridad mental con Alva",
   },
 ],
   className,

@@ -16,10 +16,10 @@ export default function CtaWithWaitlist() {
           {/* Waitlist Column */}
           <div>
             <h2 className="text-3xl sm:text-4xl font-semibold mb-4">
-              Join the Waitlist
+              Únete a la Lista de Espera
             </h2>
             <p className="text-muted-foreground mb-6 max-w-md">
-              Get early access to Alva and stay updated on progress. Well notify you when we launch.
+              Obtén acceso anticipado a Alva y mantente informado sobre su progreso. Te notificaremos cuando lancemos.
             </p>
             <form
               action="https://formsubmit.co/luiscolin764@gmail.com"
@@ -30,11 +30,11 @@ export default function CtaWithWaitlist() {
                 type="email"
                 name="email"
                 required
-                placeholder="Enter your email"
+                placeholder="Ingresa tu correo electrónico"
                 className="w-full rounded-md border border-border bg-background px-4 py-2 text-sm text-foreground shadow-sm focus:border-ring focus:ring-2 focus:ring-ring/20"
               />
               <Button type="submit" size="lg" variant="default">
-                Join Waitlist
+                Unirme
                 <ArrowRightIcon className="ml-2 h-4 w-4" />
               </Button>
               <input type="hidden" name="_captcha" value="false" />
@@ -48,9 +48,9 @@ export default function CtaWithWaitlist() {
 
           {/* Get In Touch Column */}
           <div>
-            <h2 className="text-3xl sm:text-4xl font-semibold mb-4">Get in Touch</h2>
+            <h2 className="text-3xl sm:text-4xl font-semibold mb-4">Contáctanos</h2>
             <p className="text-muted-foreground mb-6 max-w-md">
-              Want to collaborate, invest, or help in another way? Reach out and join the mission.
+              ¿Quieres colaborar, invertir o ayudar de otra manera? Ponte en contacto y únete a la misión.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
@@ -60,11 +60,11 @@ export default function CtaWithWaitlist() {
                 className="w-full sm:w-auto"
               >
                 <a
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=luiscolin764@gmail.com&su=Hi%20there!&body=I'd%20love%20to%20give%20you%20feedback%20about%20Alva." 
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=luiscolin764@gmail.com&su=¡Hola!&body=Me%20gustaría%20darte%20feedback%20sobre%20Alva." 
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Send us an email
+                  Envíanos un correo
                 </a>
               </Button>
             </div>

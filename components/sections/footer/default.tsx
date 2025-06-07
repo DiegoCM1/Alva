@@ -35,22 +35,22 @@ export default function FooterSection({
   name = "Alva",
   columns = [
     {
-      title: "Product",
+      title: "Producto",
       links: [
-        { text: "Changelog", href: siteConfig.url },
-        { text: "Documentation", href: siteConfig.url },
+        { text: "Novedades", href: siteConfig.url },
+        { text: "Documentación", href: siteConfig.url },
       ],
     },
     {
-      title: "Company",
+      title: "Empresa",
       links: [
-        { text: "About", href: siteConfig.url },
-        { text: "Careers", href: siteConfig.url },
+        { text: "Sobre Nosotros", href: siteConfig.url },
+        { text: "Empleo", href: siteConfig.url },
         { text: "Blog", href: siteConfig.url },
       ],
     },
     {
-      title: "Contact",
+      title: "Contacto",
       links: [
         { text: "Discord", href: siteConfig.url },
         { text: "Twitter", href: siteConfig.url },
@@ -58,10 +58,10 @@ export default function FooterSection({
       ],
     },
   ],
-  copyright = "© Verskod. All rights reserved",
+  copyright = "© Verskod. Todos los derechos reservados",
   policies = [
-    { text: "Privacy Policy", href: siteConfig.url },
-    { text: "Terms of Service", href: siteConfig.url },
+    { text: "Política de Privacidad", href: siteConfig.url },
+    { text: "Términos de Servicio", href: siteConfig.url },
   ],
   className,
 }: FooterProps) {

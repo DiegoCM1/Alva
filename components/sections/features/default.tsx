@@ -26,54 +26,54 @@ interface ItemsProps {
 }
 
 export default function Items({
-  title = "What makes Alva your perfect daily companion?",
+  title = "¿Qué hace de Alva tu compañero diario perfecto?",
   items = [
     {
-      title: "Morning Activation",
+      title: "Activación Matutina",
       description:
-        "Start your day with clarity using personalized greetings, questions, and rituals.",
+        "Comienza tu día con claridad usando saludos personalizados, preguntas y rituales.",
       icon: <RocketIcon className="size-5 stroke-1" />,
     },
     {
-      title: "Night Reflection",
+      title: "Reflexión Nocturna",
       description:
-        "Wind down with guided reflections, mood tracking, and relaxing content.",
+        "Relájate con reflexiones guiadas, seguimiento del estado de ánimo y contenido relajante.",
       icon: <ScanFaceIcon className="size-5 stroke-1" />,
     },
     {
-      title: "Voice Interaction",
+      title: "Interacción por Voz",
       description:
-        "Talk to Alva naturally — ask, answer, reflect. All with your voice.",
+        "Habla con Alva naturalmente; pregunta, responde, reflexiona. Todo con tu voz.",
       icon: <AudioLinesIcon className="size-5 stroke-1" />,
     },
     {
-      title: "Mood & Energy Check",
+      title: "Control de Ánimo y Energía",
       description:
-        "Alva tracks your emotional state to improve suggestions and support.",
+        "Alva hace seguimiento de tu estado emocional para mejorar sugerencias y apoyo.",
       icon: <SquarePenIcon className="size-5 stroke-1" />,
     },
     {
-      title: "Mantras & Intentions",
+      title: "Mantras e Intenciones",
       description:
-        "Receive daily mantras and set meaningful intentions for your day.",
+        "Recibe mantras diarios y establece intenciones significativas para tu día.",
       icon: <EclipseIcon className="size-5 stroke-1" />,
     },
     {
-      title: "Smart Music Generator",
+      title: "Generador de Música Inteligente",
       description:
-        "Alva creates custom playlists based on your mood, time of day, and routine.",
+        "Alva crea listas de reproducción personalizadas según tu estado de ánimo, hora del día y rutina.",
       icon: <FastForwardIcon className="size-5 stroke-1" />,
     },
     {
-      title: "Offline Friendly",
+      title: "Funciona Sin Internet",
       description:
-        "Morning & night experiences work even without an internet connection.",
+        "Las experiencias de mañana y noche funcionan incluso sin conexión a internet.",
       icon: <RssIcon className="size-5 stroke-1" />,
     },
     {
-      title: "Always Learning",
+      title: "Aprendizaje Continuo",
       description:
-        "Alva improves with each interaction, becoming more aligned with you.",
+        "Alva mejora con cada interacción, adaptándose cada vez más a ti.",
       icon: <BrainCircuitIcon className="size-5 stroke-1" />,
     },
   ],

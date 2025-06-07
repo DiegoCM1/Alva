@@ -13,63 +13,63 @@ interface PricingProps {
 }
 
 export default function Pricing({
-  title = "Early Access Pricing",
-  description = "Alva is currently in early development. Be one of the first to support it and shape the future of your daily rituals. These prices will only be available during the MVP phase.",
+  title = "Precios de Acceso Anticipado",
+  description = "Alva está actualmente en desarrollo inicial. Sé uno de los primeros en apoyarla y dar forma al futuro de tus rituales diarios. Estos precios solo estarán disponibles durante la fase MVP.",
   plans = [
     {
-      name: "Free",
-      description: "Try out the early version of Alva at no cost",
+      name: "Gratuito",
+      description: "Prueba la versión inicial de Alva sin costo",
       price: 0,
-      priceNote: "Limited features · Voice interaction & routines available",
+      priceNote: "Funciones limitadas · Interacción por voz y rutinas disponibles",
       cta: {
         variant: "glow",
-        label: "Join for free",
-        href: "/#contact", // or early access waitlist link
+        label: "Unirse gratis",
+        href: "/#contact",
       },
       features: [
-        "Morning & night rituals",
-        "Voice interaction (beta)",
-        "Mood tracking",
-        "Offline-ready experience",
+        "Rituales de mañana y noche",
+        "Interacción por voz (beta)",
+        "Seguimiento del estado de ánimo",
+        "Experiencia sin conexión",
       ],
       variant: "default",
     },
     {
-      name: "Early Supporter",
+      name: "Partidario Temprano",
       icon: <User className="size-4" />,
       description:
-        "Support development and get lifetime access at a reduced price",
+        "Apoya el desarrollo y obtén acceso de por vida a un precio reducido",
       price: 29,
-      priceNote: "One-time payment · Includes all future features",
+      priceNote: "Pago único · Incluye todas las funciones futuras",
       cta: {
         variant: "default",
-        label: "Secure early access",
+        label: "Asegurar acceso anticipado",
         href: siteConfig.pricing.pro || "/#contact",
       },
       features: [
-        "Full access to all current & upcoming features",
-        "Priority feedback access",
-        "Free updates for life",
-        "Name listed in contributor credits (optional)",
+        "Acceso completo a todas las funciones actuales y futuras",
+        "Acceso prioritario a comentarios",
+        "Actualizaciones gratuitas de por vida",
+        "Nombre listado en créditos de contribuyentes (opcional)",
       ],
       variant: "glow-brand",
     },
     {
-      name: "Team Plan (Coming Soon)",
+      name: "Plan de Equipo (Próximamente)",
       icon: <Users className="size-4" />,
       description:
-        "For coaches, families or small teams looking to grow together",
+        "Para coaches, familias o equipos pequeños que buscan crecer juntos",
       price: 40,
-      priceNote: "Sign up to be notified when this plan launches",
+      priceNote: "Regístrate para recibir notificaciones cuando este plan se lance",
       cta: {
         variant: "default",
-        label: "Notify me",
-        href: "/#contact", // or a waitlist form
+        label: "Notificarme",
+        href: "/#contact",
       },
       features: [
-        "Shared routines and feedback insights",
-        "Multiple profiles support",
-        "Team wellness insights (planned)",
+        "Rutinas compartidas y perspectivas de retroalimentación",
+        "Soporte para múltiples perfiles",
+        "Perspectivas de bienestar del equipo (planificado)",
       ],
       variant: "glow",
     },

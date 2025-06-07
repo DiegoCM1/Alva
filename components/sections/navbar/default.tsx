@@ -47,21 +47,12 @@ export default function Navbar({
   homeUrl = "/",
   showModeToggle = true, // Agregar esta línea
   mobileLinks = [
-    { text: "Features", href: "#features" },
-    { text: "Impact", href: "#stats" },
-    { text: "FAQ", href: "#faq" },
-    { text: "Contact", href: "#cta" },
+    { text: "Funciones", href: "#features" },
+    { text: "Impacto", href: "#stats" },
+    { text: "Preguntas", href: "#faq" },
+    { text: "Contacto", href: "#cta" },
   ],
 
-  // actions = [
-  //   { text: "Sign in", href: siteConfig.url, isButton: false },
-  //   {
-  //     text: "Get Started",
-  //     href: siteConfig.url,
-  //     isButton: true,
-  //     variant: "default",
-  //   },
-  // ],
   showNavigation = true,
   className,
 }: NavbarProps) {
@@ -103,31 +94,31 @@ export default function Navbar({
                   onClick={() => scrollToSection("#features")}
                   className="hover:underline"
                 >
-                  Features
+                  Funciones
                 </button>
                 <button
                   onClick={() => scrollToSection("#stats")}
                   className="hover:underline"
                 >
-                  Impact
+                  Impacto
                 </button>
                 <button
                   onClick={() => scrollToSection("#pricing")}
                   className="hover:underline"
                 >
-                  Pricing
+                  Precios
                 </button>
                 <button
                   onClick={() => scrollToSection("#faq")}
                   className="hover:underline"
                 >
-                  FAQ
+                  Preguntas
                 </button>
                 <button
                   onClick={() => scrollToSection("#cta")}
                   className="hover:underline"
                 >
-                  Contact
+                  Contacto
                 </button>
               </nav>
             )}
