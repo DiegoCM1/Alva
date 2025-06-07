@@ -43,7 +43,7 @@ export default function Items({
     {
       title: "Interacción por Voz",
       description:
-        "Habla con Alva naturalmente; pregunta, responde, reflexiona. Todo con tu voz.",
+        "Habla con Alva naturalmente;pregunta, responde, reflexiona. Todo con tu voz.",
       icon: <AudioLinesIcon className="size-5 stroke-1" />,
     },
     {
@@ -83,7 +83,7 @@ export default function Items({
   return (
     <Section id="features" className={className}>
       <div className="max-w-container mx-auto flex flex-col items-center gap-6 sm:gap-20">
-        <h2 className="max-w-[560px] text-center text-3xl leading-tight font-semibold sm:text-5xl sm:leading-tight">
+        <h2 className="max-w-[560px] text-center text-3xl leading-tight font-semibold sm:text-5xl sm:leading-tight md:text-3xl md:leading-tight lg:text-4xl lg:leading-tight">
           {title}
         </h2>
         {items !== false && items.length > 0 && (

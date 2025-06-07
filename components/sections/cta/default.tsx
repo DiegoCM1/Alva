@@ -15,7 +15,7 @@ export default function CtaWithWaitlist() {
         <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           {/* Waitlist Column */}
           <div>
-            <h2 className="text-3xl sm:text-4xl font-semibold mb-4">
+            <h2 className="text-3xl sm:text-4xl font-semibold mb-4 md:text-3xl md:leading-tight lg:text-4xl lg:leading-tight">
               Únete a la Lista de Espera
             </h2>
             <p className="text-muted-foreground mb-6 max-w-md">
