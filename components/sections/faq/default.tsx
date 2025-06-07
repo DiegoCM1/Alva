@@ -33,7 +33,7 @@ export default function FAQ({
             estado de ánimo y sugerencias personalizadas.
           </p>
           <p className="text-muted-foreground mb-4 max-w-[640px] text-balance">
-            Te ayuda a comenzar el día con claridad y terminarlo con paz — todo
+            Te ayuda a comenzar el día con claridad y terminarlo con paz, todo
             a través de interacciones cortas e intencionales.
           </p>
         </>
@@ -53,7 +53,7 @@ export default function FAQ({
       question: "¿Alva funciona sin internet?",
       answer: (
         <p className="text-muted-foreground mb-4 max-w-[640px] text-balance">
-          Sí — Alva está siendo diseñada con funcionalidad sin conexión primero.
+          Sí, Alva está siendo diseñada con funcionalidad sin conexión primero.
           Esto significa que tus rutinas básicas de mañana y noche seguirán
           funcionando incluso cuando no estés conectado.
         </p>

@@ -35,16 +35,16 @@ export default function Hero({
   mockup = (
     <div className="flex w-full items-center justify-center gap-4 text-center sm:flex-row sm:gap-8 lg:justify-evenly">
       <Screenshot
-        srcLight="/app-light.png"
-        srcDark="/app-dark.png"
+        srcLight="/app-light-es.png"
+        srcDark="/app-dark-es.png"
         alt="Captura de Alva por la Mañana"
         width={1248}
         height={765}
         className="w-1/2 lg:w-1/3"
       />
       <Screenshot
-        srcLight="/app-light-2.png"
-        srcDark="/app-dark-2.png"
+        srcLight="/app-light-2-es.png"
+        srcDark="/app-dark-2-es.png"
         alt="Captura de Alva por la Noche"
         width={1248}
         height={765}

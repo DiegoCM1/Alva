@@ -106,7 +106,7 @@ export default function Navbar({
                   onClick={() => scrollToSection("#pricing")}
                   className="hover:underline"
                 >
-                  Precios
+                  Planes
                 </button>
                 <button
                   onClick={() => scrollToSection("#faq")}
