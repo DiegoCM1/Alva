@@ -71,7 +71,7 @@ export default function Pricing({
         "Soporte para múltiples perfiles",
         "Perspectivas de bienestar del equipo (planificado)",
       ],
-      variant: "glow",
+      variant: "glow-brand",
     },
   ],
   className = "",
