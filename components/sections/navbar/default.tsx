@@ -62,7 +62,7 @@ export default function Navbar({
       const header = document.querySelector("header");
       const headerHeight = header ? header.offsetHeight : 80;
       const elementPosition = el.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+      const offsetPosition = elementPosition + window.pageYOffset - headerHeight - headerHeight;
 
       window.scrollTo({
         top: offsetPosition,
