@@ -157,6 +157,8 @@ export default function Hero({
                 className="animate-appear-zoom opacity-0 delay-1000"
               />
             </div>
+
+            
           )}
         </div>
       </div>
