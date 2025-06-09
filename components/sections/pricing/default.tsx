@@ -52,7 +52,7 @@ export default function Pricing({
         "Actualizaciones gratuitas de por vida",
         "Nombre listado en créditos de contribuyentes (opcional)",
       ],
-      variant: "glow-brand",
+      variant: "default",
     },
     {
       name: "Plan de Equipo (Próximamente)",
@@ -71,7 +71,7 @@ export default function Pricing({
         "Soporte para múltiples perfiles",
         "Perspectivas de bienestar del equipo (planificado)",
       ],
-      variant: "glow-brand",
+      variant: "default",
     },
   ],
   className = "",
