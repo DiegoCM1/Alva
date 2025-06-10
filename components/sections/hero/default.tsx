@@ -33,22 +33,33 @@ export default function Hero({
   title = "Comienza y termina tu día con intención",
   description = "Alva es tu asistente de mañana y noche impulsado por IA, ayudándote a despertar con claridad, dormir con paz y vivir más conscientemente a través de conversaciones guiadas, música y rituales.",
   mockup = (
-    <div className="flex w-full items-center justify-center gap-4 text-center sm:flex-row sm:gap-8 lg:justify-evenly">
+    <div className="flex w-full items-center justify-center gap-4 text-center sm:flex-row sm:gap-2">
       <Screenshot
         srcLight="/app-light-es.png"
         srcDark="/app-dark-es.png"
         alt="Captura de Alva por la Mañana"
         width={1248}
         height={765}
-        className="w-1/2 lg:w-1/3"
+        className="w-1/2 lg:w-4/12"
       />
+
+      <Screenshot
+        srcLight="/app-light-3-es.png"
+        srcDark="/app-dark-2-es.png"
+        alt="Captura de Alva por la Noche"
+        width={1248}
+        height={765}
+        className="hidden w-1/2 lg:block lg:w-4/12"
+      />
+
+      {/* This image is hidden on mobile, visible on large screens */}
       <Screenshot
         srcLight="/app-light-2-es.png"
         srcDark="/app-dark-2-es.png"
         alt="Captura de Alva por la Noche"
         width={1248}
         height={765}
-        className="w-1/2 lg:w-1/3"
+        className="w-1/2 lg:w-4/12"
       />
     </div>
   ),
@@ -65,20 +76,20 @@ export default function Hero({
   className,
 }: HeroProps) {
   const scrollToSection = (id: string) => {
-      const element = document.querySelector(id);
-      if (element) {
-        const header = document.querySelector("header");
-        const headerHeight = header ? header.offsetHeight : 80;
+    const element = document.querySelector(id);
+    if (element) {
+      const header = document.querySelector("header");
+      const headerHeight = header ? header.offsetHeight : 80;
 
-        const elementPosition = element.getBoundingClientRect().top;
-        const offsetPosition =
-          elementPosition + window.scrollY - headerHeight - 32; // Added extra offset
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition =
+        elementPosition + window.scrollY - headerHeight - 32; // Added extra offset
 
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth",
-        });
-      }
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
   };
 
   const defaultButtons: HeroButtonProps[] = [
@@ -157,8 +168,6 @@ export default function Hero({
                 className="animate-appear-zoom opacity-0 delay-1000"
               />
             </div>
-
-            
           )}
         </div>
       </div>
