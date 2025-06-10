@@ -1,3 +1,5 @@
+import Github from "@/components/logos/github";
+
 export const siteConfig = {
   name: "Alva – AI-Powered Morning & Night Companion",
   url: "https://launchuicomponents.com",
@@ -7,9 +9,10 @@ export const siteConfig = {
   description:
     "Landing page components built with React, Shadcn/ui and Tailwind that will make your website feel premium.",
   links: {
-    twitter: "https://twitter.com/mikolajdobrucki",
-    github: "https://github.com/launch-ui/launch-ui",
+    LinkedIn: "https://www.linkedin.com/in/mikolajdobrucki/",
+    Instagram: "https://github.com/DiegoCM1/Alva",
     email: "mailto:contact@mikolajdobrucki.com",
+    github: "https://github.com/DiegoCM1/Alva"
   },
   pricing: {
     pro: "https://launchui.lemonsqueezy.com/buy/b4798c68-c858-4c34-860b-069b5a0d6c4e",

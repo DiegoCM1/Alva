@@ -39,6 +39,7 @@ export default function FooterSection({
       links: [
         { text: "Novedades", href: siteConfig.url },
         { text: "Documentación", href: siteConfig.url },
+        { text: "Github", href: siteConfig.links.github },
       ],
     },
     {
@@ -52,9 +53,8 @@ export default function FooterSection({
     {
       title: "Contacto",
       links: [
-        { text: "Discord", href: siteConfig.url },
-        { text: "Twitter", href: siteConfig.url },
-        { text: "Github", href: siteConfig.links.github },
+        { text: "LinkedIn", href: siteConfig.links.LinkedIn },
+        { text: "Instagram", href: siteConfig.links.Instagram },
       ],
     },
   ],
@@ -106,5 +106,3 @@ export default function FooterSection({
     </footer>
   );
 }
-
-
