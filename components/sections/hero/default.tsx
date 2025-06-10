@@ -31,7 +31,7 @@ interface HeroProps {
 
 export default function Hero({
   title = "Comienza y termina tu día con intención",
-  description = "Alva es tu asistente de mañana y noche impulsado por IA, ayudándote a despertar con claridad, dormir con paz y vivir más conscientemente a través de conversaciones guiadas, música y rituales.",
+  description = "Alva te acompaña al despertar y al dormir, combinando IA, música, conversaciones y rituales para cuidar tu bienestar.",
   mockup = (
     <div className="flex w-full items-center justify-center gap-4 text-center sm:flex-row sm:gap-2">
       <Screenshot

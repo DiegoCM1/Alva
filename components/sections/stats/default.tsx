@@ -15,27 +15,27 @@ interface StatsProps {
 export default function Stats({
 items = [
   {
-    label: "usuarios guiados",
-    value: 1.2,
-    suffix: "k",
-    description: "personas han comenzado o terminado su día con Alva",
-  },
-  {
-    label: "rituales diarios creados",
+    label: "Usuarios guiados",
     value: 7,
     suffix: "k",
-    description: "rutinas únicas de mañana y noche personalizadas por la IA",
+    description: "personas han comenzado o terminado su día con Alva.",
   },
   {
-    label: "mejora del sueño",
+    label: "Rituales diarios creados",
+    value: 1.2,
+    suffix: "k",
+    description: "rutinas únicas de mañana y noche personalizadas por la IA.",
+  },
+  {
+    label: "Mejora del sueño",
     value: "84%",
-    description: "de usuarios reportan mejor calidad de sueño después de 1 semana",
+    description: "de usuarios reportan mejor calidad de sueño después de 1 semana.",
   },
   {
-    label: "registros emocionales",
+    label: "Registros emocionales",
     value: 19,
     suffix: "k",
-    description: "registros de estado de ánimo y claridad mental con Alva",
+    description: "registros de estado de ánimo y claridad mental con Alva.",
   },
 ],
   className,
@@ -51,7 +51,7 @@ items = [
                 className="flex flex-col items-start gap-3 text-left"
               >
                 {item.label && (
-                  <div className="text-muted-foreground text-sm font-semibold">
+                  <div className="text-muted-foreground text-lg font-bold">
                     {item.label}
                   </div>
                 )}
@@ -66,7 +66,7 @@ items = [
                   )}
                 </div>
                 {item.description && (
-                  <div className="text-muted-foreground text-sm font-semibold text-pretty">
+                  <div className="text-muted-foreground text-sm font-medium text-pretty">
                     {item.description}
                   </div>
                 )}
