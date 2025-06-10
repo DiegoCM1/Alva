@@ -24,7 +24,7 @@ export default function Pricing({
       cta: {
         variant: "glow",
         label: "Unirse gratis",
-        href: "/#contact",
+        href: "/#cta",
       },
       features: [
         "Rituales de mañana y noche",
@@ -52,7 +52,7 @@ export default function Pricing({
         "Actualizaciones gratuitas de por vida",
         "Nombre listado en créditos de contribuyentes (opcional)",
       ],
-      variant: "default",
+      variant: "glow-brand",
     },
     {
       name: "Plan de Equipo (Próximamente)",
@@ -71,7 +71,7 @@ export default function Pricing({
         "Soporte para múltiples perfiles",
         "Perspectivas de bienestar del equipo (planificado)",
       ],
-      variant: "default",
+      variant: "glow-brand",
     },
   ],
   className = "",
