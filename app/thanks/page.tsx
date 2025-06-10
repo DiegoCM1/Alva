@@ -15,7 +15,7 @@ export default function ThanksPage() {
           🎉 ¡Bienvenido a bordo!
         </span>
 
-        <h1 className="animate-appear from-foreground to-foreground dark:to-muted-foreground relative z-10 inline-block bg-gradient-to-b bg-clip-text text-4xl font-semibold text-balance text-transparent drop-shadow-2xl opacity-0 delay-100 sm:text-5xl sm:leading-tight">
+        <h1 className="animate-appear from-foreground to-foreground dark:to-muted-foreground relative z-10 inline-block bg-gradient-to-b bg-clip-text text-4xl font-semibold text-balance text-transparent drop-shadow-2xl opacity-0 delay-100 sm:text-5xl sm:leading-tight text-center">
           ¡Ya estás en la lista de espera!
         </h1>
 
