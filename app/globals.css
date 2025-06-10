@@ -161,9 +161,10 @@
   /* Accent colors */
   --brand: oklch(83.6% 0.1177 66.87);
   --brand-foreground: oklch(0.488 0.243 264.376);
+  
 
   /* Customized shadcn/ui colors */
-  --background: oklch(0.141 0.005 285.823);
+  --background: rgb(3, 7, 18);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.141 0.005 285.823);
   --card-foreground: oklch(0.985 0 0);

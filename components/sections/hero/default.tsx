@@ -45,7 +45,7 @@ export default function Hero({
 
       <Screenshot
         srcLight="/app-light-3-es.png"
-        srcDark="/app-dark-2-es.png"
+        srcDark="/app-dark-3-es.png"
         alt="Captura de Alva por la Noche"
         width={1248}
         height={765}
