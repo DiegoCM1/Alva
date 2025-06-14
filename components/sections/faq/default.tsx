@@ -46,6 +46,7 @@ export default function FAQ({
           Alva está actualmente en desarrollo inicial. Puedes unirte al programa
           de acceso anticipado gratuito para probar la versión MVP y ayudar a dar
           forma al futuro de la aplicación con tus comentarios.
+          Muy pronto disponible en la App Store y Google Play.
         </p>
       ),
     },

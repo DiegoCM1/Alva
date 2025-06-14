@@ -65,12 +65,36 @@ export default function Hero({
   ),
   badge = (
     <Badge variant="outline" className="animate-appear opacity-0">
-      <span className="text-muted-foreground">Hecho con ❤️ por Verskod</span>
+      <span className="text-muted-foreground">Muy pronto disponible en la App Store y Google Play 📲</span>
       <a href="#cta" className="flex items-center gap-1">
         Únete a la lista de espera
         <ArrowRightIcon className="size-3" />
       </a>
     </Badge>
+
+//     <Badge variant="outline" className="animate-appear opacity-0 flex flex-col sm:flex-row items-center gap-2 text-center sm:text-left">
+//   <div className="flex flex-col">
+//     <span className="text-muted-foreground text-sm">Muy pronto en:</span>
+//     <div className="flex items-center justify-center gap-2 mt-1">
+//       <Image
+//         src="/google-play-badge.png"
+//         alt="Google Play"
+//         width={120}
+//         height={36}
+//       />
+//       <Image
+//         src="/google-play-badge.png"
+//         alt="App Store"
+//         width={120}
+//         height={36}
+//       />
+//     </div>
+//   </div>
+//   <a href="#cta" className="flex items-center gap-1 text-primary hover:underline mt-2 sm:mt-0">
+//     Únete a la lista de espera
+//     <ArrowRightIcon className="size-3" />
+//   </a>
+// </Badge>
   ),
   buttons,
   className,
