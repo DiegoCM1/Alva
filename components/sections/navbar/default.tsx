@@ -13,7 +13,10 @@ import {
   NavbarRight,
 } from "../../ui/navbar";
 import { Sheet, SheetContent, SheetTrigger } from "../../ui/sheet";
-import LaunchUI from "../../logos/launch-ui";
+import { useTheme } from "next-themes";
+import Image from "next/image";
+import AlvaLogoLight from "../../../public/alva-logo-light.png";
+import AlvaLogoDark from "../../../public/favicon.png";
 
 interface NavbarLink {
   text: string;
@@ -42,7 +45,7 @@ interface NavbarProps {
 }
 
 export default function Navbar({
-  logo = <LaunchUI />,
+  logo = <Logo />,
   name = "Alva",
   homeUrl = "/",
   showModeToggle = true, // Agregar esta línea
@@ -186,5 +189,18 @@ export default function Navbar({
         </NavbarComponent>
       </div>
     </header>
+  );
+}
+
+function Logo() {
+  const { theme } = useTheme();
+
+  return (
+    <Image
+      src={theme === "dark" ? AlvaLogoDark : AlvaLogoLight}
+      alt="Alva Logo"
+      width={40}
+      height={40}
+    />
   );
 }
