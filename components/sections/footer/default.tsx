@@ -1,6 +1,13 @@
+"use client";
+
 import { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
+import Image from "next/image";
+import AlvaLogoLight from "../../../public/alva-logo-light.png";
+import AlvaLogoDark from "../../../public/favicon.png";
+import { useTheme } from "next-themes";
+
 
 import {
   Footer,
@@ -31,7 +38,7 @@ interface FooterProps {
 }
 
 export default function FooterSection({
-  logo = <LaunchUI />,
+  logo = <Logo />,
   name = "Alva",
   columns = [
     {
@@ -104,5 +111,18 @@ export default function FooterSection({
         </Footer>
       </div>
     </footer>
+  );
+}
+
+function Logo() {
+  const { theme } = useTheme();
+
+  return (
+    <Image
+      src={theme === "dark" ? AlvaLogoDark : AlvaLogoLight}
+      alt="Alva Logo"
+      width={40}
+      height={40}
+    />
   );
 }
