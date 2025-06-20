@@ -10,8 +10,6 @@ import { Section } from "../../ui/section";
 import { Mockup, MockupFrame } from "../../ui/mockup";
 import Glow from "../../ui/glow";
 import Screenshot from "../../ui/screenshot";
-import Image from "next/image";
-import { type ImageProps } from "next/image";
 
 interface HeroButtonProps {
   href: string;
@@ -67,28 +65,12 @@ export default function Hero({
   ),
 
   badge = (
-    <Badge variant="outline" className="animate-appear opacity-0">
-      <div className="flex flex-row items-center gap-2">
+    <Badge variant="outline" className="animate-appear opacity-0 justify-evenly">
+      <div className="flex flex-row items-center gap-2 w-3/6">
         <span className="text-muted-foreground">Pronto disponible en Google Play y la App Store 📲</span>
-        {/* <div className="mt-1 flex items-center justify-center">
-          <Image
-            src="/google-play-logo.png"
-            alt="Google Play"
-            width={20}
-            height={20}
-            className="w-7 h-7 object-contain"
-          />
-          <Image
-            src="/app-store-logo.png"
-            alt="App Store"
-            width={20}
-            height={20}
-            className="w-7 h-7 object-cover"
-          />
-        </div> */}
       </div>
 
-      <a href="#cta" className="flex items-center gap-1">
+      <a href="#cta" className="flex items-center gap-1 w-2/6">
         Únete a la lista de espera
         <ArrowRightIcon className="size-3" />
       </a>
