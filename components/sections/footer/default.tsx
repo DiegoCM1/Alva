@@ -15,7 +15,6 @@ import {
   FooterBottom,
   FooterContent,
 } from "../../ui/footer";
-import LaunchUI from "../../logos/launch-ui";
 
 interface FooterLink {
   text: string;
