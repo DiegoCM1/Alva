@@ -10,6 +10,8 @@ import { Section } from "../../ui/section";
 import { Mockup, MockupFrame } from "../../ui/mockup";
 import Glow from "../../ui/glow";
 import Screenshot from "../../ui/screenshot";
+import Image from "next/image";
+import { type ImageProps } from "next/image";
 
 interface HeroButtonProps {
   href: string;
@@ -63,38 +65,34 @@ export default function Hero({
       />
     </div>
   ),
+
   badge = (
     <Badge variant="outline" className="animate-appear opacity-0">
-      <span className="text-muted-foreground">Muy pronto disponible en la App Store y Google Play 📲</span>
+      <div className="flex flex-row items-center gap-2">
+        <span className="text-muted-foreground">Pronto disponible en Google Play y la App Store 📲</span>
+        {/* <div className="mt-1 flex items-center justify-center">
+          <Image
+            src="/google-play-logo.png"
+            alt="Google Play"
+            width={20}
+            height={20}
+            className="w-7 h-7 object-contain"
+          />
+          <Image
+            src="/app-store-logo.png"
+            alt="App Store"
+            width={20}
+            height={20}
+            className="w-7 h-7 object-cover"
+          />
+        </div> */}
+      </div>
+
       <a href="#cta" className="flex items-center gap-1">
         Únete a la lista de espera
         <ArrowRightIcon className="size-3" />
       </a>
     </Badge>
-
-//     <Badge variant="outline" className="animate-appear opacity-0 flex flex-col sm:flex-row items-center gap-2 text-center sm:text-left">
-//   <div className="flex flex-col">
-//     <span className="text-muted-foreground text-sm">Muy pronto en:</span>
-//     <div className="flex items-center justify-center gap-2 mt-1">
-//       <Image
-//         src="/google-play-badge.png"
-//         alt="Google Play"
-//         width={120}
-//         height={36}
-//       />
-//       <Image
-//         src="/google-play-badge.png"
-//         alt="App Store"
-//         width={120}
-//         height={36}
-//       />
-//     </div>
-//   </div>
-//   <a href="#cta" className="flex items-center gap-1 text-primary hover:underline mt-2 sm:mt-0">
-//     Únete a la lista de espera
-//     <ArrowRightIcon className="size-3" />
-//   </a>
-// </Badge>
   ),
   buttons,
   className,
